@@ -1,3 +1,104 @@
 body{
-  font-family: 'Caveat', cursive, 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F2F2F2;
+}
+a{
+  color: black;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+.header{
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  .header_left{
+    width: 95px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .header_right{
+    display: flex;
+    align-items: center;
+    li{
+      margin-left: 25px;
+      a{
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.main_visual{
+  display: flex;
+  overflow:hidden;
+  position: relative;
+  .main_visual_left{
+    width: 63%;
+    height: 660px;
+    overflow:hidden;
+    margin:0 auto;
+    img{
+      max-width: 100%;
+      height: 100%;
+      border-top-right-radius: 85px;
+      border-bottom-right-radius: 85px;
+    }
+    .photo{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .main_visual_title{
+      right: 50%;
+      top: 65px;
+      z-index: 2;
+      position: absolute;
+      writing-mode: vertical-rl;
+      height: 390px;
+      font-size: 20px;
+      color: rgb(0 0 0 / 64%);
+      letter-spacing: 6px;
+      p:nth-of-type(2) {
+        padding-top: 100px;
+      }
+    }
+  }
+  .main_visual_right{
+    width: 37%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .right_top{
+      margin-bottom: 17px;
+    }
+    .right_bottom p{
+      font-size: 0.625rem;
+      text-align: center;
+    }
+  }
+  svg {
+    position: absolute;
+    bottom: 0px;
+    transform: rotate(180deg);
+    z-index: 1;
+    path {
+      animation: wave linear 25s infinite;
+    }
+  }
+}
+
+@keyframes wave {
+	0% {
+		transform:translateX(0px);
+	}
+  50% {
+    transform: translateX(15%);
+  }
+	100% {
+		transform:translateX(0px);
+	}
 }
