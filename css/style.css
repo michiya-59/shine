@@ -29,16 +29,15 @@ a {
 }
 .header .header_right li a {
   font-size: 0.875rem;
+  color: black;
 }
 
 .main_visual {
   display: flex;
-  overflow: hidden;
-  position: relative;
 }
 .main_visual .main_visual_left {
+  position: relative;
   width: 63%;
-  height: 660px;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -46,7 +45,6 @@ a {
   max-width: 100%;
   height: 100%;
   border-top-right-radius: 85px;
-  border-bottom-right-radius: 85px;
 }
 .main_visual .main_visual_left .photo {
   width: 100%;
@@ -54,9 +52,8 @@ a {
   display: block;
 }
 .main_visual .main_visual_left .main_visual_title {
-  right: 50%;
+  right: 20%;
   top: 65px;
-  z-index: 2;
   position: absolute;
   writing-mode: vertical-rl;
   height: 390px;
@@ -66,6 +63,12 @@ a {
 }
 .main_visual .main_visual_left .main_visual_title p:nth-of-type(2) {
   padding-top: 100px;
+}
+.main_visual .main_visual_left canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .main_visual .main_visual_right {
   width: 37%;
@@ -81,14 +84,161 @@ a {
   font-size: 0.625rem;
   text-align: center;
 }
-.main_visual svg {
+.main_visual .main_visual_right .right_bottom p:nth-of-type(1) {
+  font-size: 1.25rem;
+}
+
+.main_content {
+  padding: 0 190px;
+}
+.main_content .company_explanation {
+  position: relative;
+}
+.main_content .company_explanation .company_founding_reason, .main_content .company_explanation .our_thoughts {
+  width: 720px;
+  margin-bottom: 70px;
+}
+.main_content .company_explanation .company_founding_reason h1, .main_content .company_explanation .our_thoughts h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 3.15rem;
+  margin-bottom: 15px;
+}
+.main_content .company_explanation .company_founding_reason p, .main_content .company_explanation .our_thoughts p {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  line-height: 25px;
+  padding-left: 25px;
+}
+.main_content .company_explanation img {
+  opacity: 0.4;
   position: absolute;
-  bottom: 0px;
-  transform: rotate(180deg);
+  right: 11%;
+  top: 7px;
+  width: 35%;
+}
+.main_content .our_memory {
+  display: flex;
+  margin: 230px 0;
+  position: relative;
+  height: 500px;
+}
+.main_content .our_memory .memory_image {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+.main_content .our_memory .memory_image img {
+  width: 330px;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+}
+.main_content .our_memory .memory_image img:nth-of-type(1) {
+  left: 20%;
+  top: -25%;
+}
+.main_content .our_memory .memory_image img:nth-of-type(2) {
+  right: 20%;
+  top: 25%;
+}
+.main_content .our_memory .dotted_line_box {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(-16deg, #333333, #333333 7px, transparent 7px, transparent 13px, #333333 13px), repeating-linear-gradient(74deg, #333333, #333333 7px, transparent 7px, transparent 13px, #333333 13px), repeating-linear-gradient(164deg, #333333, #333333 7px, transparent 7px, transparent 13px, #333333 13px), repeating-linear-gradient(254deg, #333333, #333333 7px, transparent 7px, transparent 13px, #333333 13px);
+  background-size: 2px calc(100% + 13.52px), calc(100% + 13.52px) 2px, 2px calc(100% + 13.52px), calc(100% + 13.52px) 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  animation: borderAnimation 0.8s infinite linear;
+}
+.main_content .our_memory p {
+  position: absolute;
+  right: 0;
+  top: -11%;
+  font-family: "Amatic SC", cursive;
+  font-size: 80px;
+  transform: rotate(-20deg);
+}
+
+.menu_content {
+  padding: 127px 190px 75px 190px;
+  background: url("../image/circle.png") repeat;
+  animation: fall 18s infinite linear;
+  background-size: contain;
+  background-color: #E3E2E0;
+  position: relative;
+}
+.menu_content .menu_content_title {
+  font-family: "Amatic SC", cursive;
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.4588235294);
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  transform: rotate(5deg);
+}
+.menu_content .menu_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 505px;
+}
+.menu_content .menu_list a {
+  height: 230px;
+  border-radius: 20px;
+  background: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+.menu_content .menu_list a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
+}
+.menu_content .menu_list a:hover::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+.menu_content .menu_list a div {
+  text-align: center;
+  font-family: "Amatic SC", cursive;
   z-index: 1;
 }
-.main_visual svg path {
-  animation: wave linear 25s infinite;
+.menu_content .menu_list a div p {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.menu_content .menu_list a div h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.menu_content .menu_list a:nth-of-type(1) {
+  width: 62%;
+  background-image: url("../image/S__55779361.jpg");
+}
+.menu_content .menu_list a:nth-of-type(2) {
+  width: 36%;
+  background-image: url("../image/25803090_s.jpg");
+}
+.menu_content .menu_list a:nth-of-type(3) {
+  width: 49%;
+  background-image: url("../image/2805271_s.jpg");
+}
+.menu_content .menu_list a:nth-of-type(4) {
+  width: 49%;
+  background-image: url("../image/AdobeStock_358963151_Preview.jpeg");
 }
 
 @keyframes wave {
@@ -100,5 +250,21 @@ a {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+@keyframes borderAnimation {
+  from {
+    background-position: 0 0, -13.52px 0, 100% -13.52px, 0 100%;
+  }
+  to {
+    background-position: 0 -13.52px, 0 0, 100% 0, -13.52px 100%;
+  }
+}
+@keyframes fall {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -700px 700px;
   }
 }/*# sourceMappingURL=style.css.map */
