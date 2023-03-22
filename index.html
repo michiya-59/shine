@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/destyle.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
   <script src="https://kit.fontawesome.com/00e4001a9c.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <title></title>
 </head>
 <body>
+  <!-- ヘッダー -->
   <header>
     <div class="header">
       <div class="header_left">
@@ -30,25 +32,78 @@
       </ul>
     </div>
   </header>
+  <!-- メインビジュアル -->
   <section class="main_visual">
-    
     <div class="main_visual_left">
       <img src="image/S__55779540.jpg" alt="メインビジュアル写真" class="photo">
       <div class="main_visual_title">
         <p>成功した自分を想像して</p>
         <p>そのために今行動しよう</p>
       </div>
+      <!-- ウェーブ -->
+      <canvas id="waveCanvas"></canvas>
     </div>
     <div class="main_visual_right">
       <img src="image/main_icon.svg" alt="メインアイコン" class="right_top">
       <div class="right_bottom">
-        <h3>開け「ユメの扉」</h3>
+        <p>開け「ユメの扉」</p>
         <p>community STN</p>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 1440 320">
-      <path fill="#F2F2F2" fill-opacity="1" d="M0,192L40,197.3C80,203,160,213,240,202.7C320,192,400,160,480,170.7C560,181,640,235,720,224C800,213,880,139,960,133.3C1040,128,1120,192,1200,213.3C1280,235,1360,213,1400,202.7L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-    </svg>
   </section>
+  <section class="main_content">
+    <div class="company_explanation">
+      <div class="company_founding_reason">
+        <h1>Shineとは</h1>
+        <p>Shineとは輝くという意味ですが、一人一人には必ず自分の良さがある。<br>
+        だからこそ、その良さを発揮してその子の存在、潜在能力を輝かせいたい。そうゆう意味を込めて株式会社Shineを設立しました。</p>
+      </div>
+      <div class="our_thoughts">
+        <h1>our thoughts</h1>
+        <p>人生にはチャレンジングな瞬間が必ずやってきます。その時に、自分に自信を持ち、決断し、勇気を持って挑戦することが重要です。成功か失敗かは別として、自分自身が何かに挑戦し、その経験から学ぶことができるということを忘れないでください</p>
+      </div>
+      <img src="image/icon.png" alt="">
+    </div>
+    <div class="our_memory">
+      <div class="memory_image">
+        <img src="image/S__55779380.jpg" alt="">
+        <img src="image/S__55779386.jpg" alt="">
+      </div>
+      <div class="dotted_line_box"></div>
+      <p>our memory</p>
+    </div>
+  </section>
+  <section class="menu_content">
+    <h3 class="menu_content_title">content</h3>
+    <div class="content">
+      <div class="menu_list">
+        <a href="">
+          <div>
+            <p>Message</p>
+            <h3>代表挨拶</h3>
+          </div>
+        </a>
+        <a href="">
+          <div>
+            <p>Contact</p>
+            <h3>問い合わせ</h3>
+          </div>
+        </a>
+        <a href="">
+          <div>
+            <p>Company</p>
+            <h3>会社概要</h3>
+          </div>
+        </a>
+        <a href="">
+          <div>
+            <p>Business</p>
+            <h3>事業内容</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <script src="js/wave.js"></script>
 </body>
 </html>
