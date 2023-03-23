@@ -7,7 +7,8 @@ a{
 }
 
 @import url('https://fonts.googleapis.com/css?family=Merienda');
-
+// 共通
+// ヘッダースタイル
 .header{
   display: flex;
   padding: 20px 50px;
@@ -32,6 +33,7 @@ a{
   }
 }
 
+// TOPページ
 .main_visual{
   display: flex;
   .main_visual_left{
@@ -160,7 +162,6 @@ a{
     }
   }
 }
-
 .menu_content{
   padding: 127px 190px 75px 190px;
   background: url("../image/circle.png") repeat;
@@ -170,11 +171,11 @@ a{
   position: relative;
   .menu_content_title{
     font-family: "Amatic SC", cursive;
-    font-size: 6.25rem;
     color: #00000075;
     font-weight: bold;
     position: absolute;
-    top: 0;
+    font-size: 4.25rem;
+    top: 23px;
     transform: rotate(5deg);
   }
   .menu_list{
@@ -182,7 +183,7 @@ a{
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    height: 505px;
+    height: 480px;
     a{
       height: 230px;
       border-radius: 20px;
@@ -222,11 +223,11 @@ a{
       }
     }
     a:nth-of-type(1){
-      width: 62%;
+      width: 55%;
       background-image: url('../image/S__55779361.jpg');
     }
     a:nth-of-type(2){
-      width: 36%;
+      width: 43%;
       background-image: url('../image/25803090_s.jpg');
     }
     a:nth-of-type(3){
@@ -240,6 +241,60 @@ a{
   }
 }
 
+// 問い合わせページ
+.container{
+  padding: 0 190px;
+  .contact_page_title{
+    width: 20%;
+    height: 56px;
+    display: flex;
+    margin-bottom: 51px;
+    img{
+      width: 29%;
+      height: 100%;
+    }
+    .contact_title_right{
+      margin-left: 9px;
+      line-height: 27px;
+      p{
+        font-family: "Amatic SC", cursive;
+        font-size: 21px;
+      }
+      h3{
+        font-size: 23px;
+      }
+    }
+  }
+  .contact_tel, .contact_mail, .contact_line{
+    margin-bottom: 80px;
+    h2{
+      font-size: 1.25rem;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+      padding-bottom: 5px;
+    }
+    .contact_detail{
+      display: flex;
+      height: 50px;
+      margin: 15px 20px;
+      align-items: center;
+      img{
+        height: 100%;
+      }
+      .contact_detail_p{
+        margin-left: 29px;
+        font-size: 1.25rem;
+      }
+    }
+    p{
+      line-height: 22px;
+      margin-top: 25px;
+    }
+  }
+}
+
+// 共通
+// フッタースタイル
 .sub_content{
   .sub_footer_icon{
     display: block;
@@ -256,8 +311,8 @@ a{
   .slider {
     margin: 0 -13px; /* 一枚一枚の間隔を13pxに設定 */
     img{
-      width: 240px;
-      height: 220px; /* 一枚の写真のサイズを240px × 240pxに設定 */
+      width: 200px;
+      height: 200px; /* 一枚の写真のサイズを240px × 240pxに設定 */
       margin: 0 13px; /* 一枚一枚の間隔を13pxに設定 */
     }
   }
@@ -305,7 +360,7 @@ footer{
     padding: 25px 0 10px 0;
     font-weight: bold;
     font-family: 'Amatic SC', cursive;
-    font-size: 1.625rem;
+    font-size: 1rem;
   }
 }
 

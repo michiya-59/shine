@@ -173,11 +173,11 @@ a {
 }
 .menu_content .menu_content_title {
   font-family: "Amatic SC", cursive;
-  font-size: 6.25rem;
   color: rgba(0, 0, 0, 0.4588235294);
   font-weight: bold;
   position: absolute;
-  top: 0;
+  font-size: 4.25rem;
+  top: 23px;
   transform: rotate(5deg);
 }
 .menu_content .menu_list {
@@ -185,7 +185,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  height: 505px;
+  height: 480px;
 }
 .menu_content .menu_list a {
   height: 230px;
@@ -226,11 +226,11 @@ a {
   font-weight: bold;
 }
 .menu_content .menu_list a:nth-of-type(1) {
-  width: 62%;
+  width: 55%;
   background-image: url("../image/S__55779361.jpg");
 }
 .menu_content .menu_list a:nth-of-type(2) {
-  width: 36%;
+  width: 43%;
   background-image: url("../image/25803090_s.jpg");
 }
 .menu_content .menu_list a:nth-of-type(3) {
@@ -240,6 +240,57 @@ a {
 .menu_content .menu_list a:nth-of-type(4) {
   width: 49%;
   background-image: url("../image/AdobeStock_358963151_Preview.jpeg");
+}
+
+.container {
+  padding: 0 190px;
+}
+.container .contact_page_title {
+  width: 20%;
+  height: 56px;
+  display: flex;
+  margin-bottom: 51px;
+}
+.container .contact_page_title img {
+  width: 29%;
+  height: 100%;
+}
+.container .contact_page_title .contact_title_right {
+  margin-left: 9px;
+  line-height: 27px;
+}
+.container .contact_page_title .contact_title_right p {
+  font-family: "Amatic SC", cursive;
+  font-size: 21px;
+}
+.container .contact_page_title .contact_title_right h3 {
+  font-size: 23px;
+}
+.container .contact_tel, .container .contact_mail, .container .contact_line {
+  margin-bottom: 80px;
+}
+.container .contact_tel h2, .container .contact_mail h2, .container .contact_line h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+.container .contact_tel .contact_detail, .container .contact_mail .contact_detail, .container .contact_line .contact_detail {
+  display: flex;
+  height: 50px;
+  margin: 15px 20px;
+  align-items: center;
+}
+.container .contact_tel .contact_detail img, .container .contact_mail .contact_detail img, .container .contact_line .contact_detail img {
+  height: 100%;
+}
+.container .contact_tel .contact_detail .contact_detail_p, .container .contact_mail .contact_detail .contact_detail_p, .container .contact_line .contact_detail .contact_detail_p {
+  margin-left: 29px;
+  font-size: 1.25rem;
+}
+.container .contact_tel p, .container .contact_mail p, .container .contact_line p {
+  line-height: 22px;
+  margin-top: 25px;
 }
 
 .sub_content .sub_footer_icon {
@@ -258,8 +309,8 @@ a {
   margin: 0 -13px; /* 一枚一枚の間隔を13pxに設定 */
 }
 .sub_content .slider img {
-  width: 240px;
-  height: 220px; /* 一枚の写真のサイズを240px × 240pxに設定 */
+  width: 200px;
+  height: 200px; /* 一枚の写真のサイズを240px × 240pxに設定 */
   margin: 0 13px; /* 一枚一枚の間隔を13pxに設定 */
 }
 .sub_content p {
@@ -306,7 +357,7 @@ footer p {
   padding: 25px 0 10px 0;
   font-weight: bold;
   font-family: "Amatic SC", cursive;
-  font-size: 1.625rem;
+  font-size: 1rem;
 }
 
 @keyframes wave {
