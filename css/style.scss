@@ -25,7 +25,7 @@ a{
     li{
       margin-left: 25px;
       a{
-        font-size: 0.875rem;
+        font-size: 1rem;
         color: black;
       }
     }
@@ -55,7 +55,7 @@ a{
       position: absolute;
       writing-mode: vertical-rl;
       height: 390px;
-      font-size: 20px;
+      font-size: 1.25rem;
       color: rgb(0 0 0 / 64%);
       letter-spacing: 6px;
       p:nth-of-type(2) {
@@ -131,11 +131,11 @@ a{
         position: absolute;
       }
       img:nth-of-type(1) {
-        left: 20%;
+        left: 17%;
         top: -25%;
       }
       img:nth-of-type(2) {
-        right: 20%;
+        right: 17%;
         top: 25%;
       }
     }
@@ -155,7 +155,7 @@ a{
       right: 0;
       top: -11%;
       font-family: 'Amatic SC', cursive;
-      font-size: 80px;
+      font-size: 5rem;
       transform: rotate(-20deg);
     }
   }
@@ -170,7 +170,7 @@ a{
   position: relative;
   .menu_content_title{
     font-family: "Amatic SC", cursive;
-    font-size: 100px;
+    font-size: 6.25rem;
     color: #00000075;
     font-weight: bold;
     position: absolute;
@@ -239,6 +239,76 @@ a{
     }
   }
 }
+
+.sub_content{
+  .sub_footer_icon{
+    display: block;
+    margin: 50px auto;
+    position: relative;
+  }
+  .line{
+    background: black;
+    width: 1px;
+    height: 67px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .slider {
+    margin: 0 -13px; /* 一枚一枚の間隔を13pxに設定 */
+    img{
+      width: 240px;
+      height: 220px; /* 一枚の写真のサイズを240px × 240pxに設定 */
+      margin: 0 13px; /* 一枚一枚の間隔を13pxに設定 */
+    }
+  }
+  p{
+    text-align: center;
+    margin: 58px 0;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  a{
+    display: block;
+    background: #EBDC1F;
+    width: 9%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 9px 0px;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.25rem;
+  }
+}
+
+footer{
+  text-align: center;
+  background: #E3E2E0;
+  .footer{
+    display: flex;
+    padding: 30px 190px;
+    margin-top: 150px;
+    .footer_left{
+      width: 38%;
+      text-align: center;
+      border-right: 1px solid black;
+    }
+    .footer_right{
+      width: 52%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-family: 'Amatic SC', cursive;
+      font-size: 26px;
+    }
+  }
+  p{
+    padding: 25px 0 10px 0;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.625rem;
+  }
+}
+
 
 @keyframes wave {
 	0% {
