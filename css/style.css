@@ -293,6 +293,90 @@ a {
   margin-top: 25px;
 }
 
+.representatice_container {
+  display: flex;
+  justify-content: space-between;
+  height: 690px;
+  margin-bottom: 164px;
+  padding: 0 0 0 100px;
+}
+.representatice_container .representatice_page_title {
+  width: 32%;
+  height: 56px;
+  display: flex;
+  margin-bottom: 51px;
+}
+.representatice_container .representatice_page_title img {
+  width: 29%;
+  height: 100%;
+}
+.representatice_container .representatice_page_title .representatice_title_right {
+  margin-left: 9px;
+  line-height: 27px;
+}
+.representatice_container .representatice_page_title .representatice_title_right p {
+  font-family: "Amatic SC", cursive;
+  font-size: 17px;
+}
+.representatice_container .representatice_page_title .representatice_title_right h3 {
+  font-size: 23px;
+}
+.representatice_container .message {
+  line-height: 22px;
+}
+.representatice_container .message_left {
+  width: 45%;
+  margin-right: 35px;
+  height: 100%;
+}
+.representatice_container .message_left .contact_page_title {
+  width: 32%;
+  height: 56px;
+  display: flex;
+  margin-bottom: 37px;
+}
+.representatice_container .message_left .message_bottom {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  margin-top: 32px;
+}
+.representatice_container .message_left .message_bottom a {
+  width: 23%;
+  background: #EBDC1F;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 8px;
+  height: 30px;
+}
+.representatice_container .message_left .message_bottom .representative_name {
+  text-align: right;
+  width: 77%;
+  font-family: "Toppan Bunkyu Midashi Mincho";
+}
+.representatice_container .message_left .message_bottom .representative_name h4:nth-of-type(1) {
+  margin-bottom: 5px;
+}
+.representatice_container .message_left .message_bottom .representative_name h4:nth-of-type(2) {
+  font-size: 1.25rem;
+}
+.representatice_container .message_right {
+  width: 50%;
+  position: relative;
+  display: flex;
+}
+.representatice_container .message_right img:nth-of-type(1) {
+  position: absolute;
+  height: 960px;
+  top: -93px;
+  left: -85px;
+}
+.representatice_container .message_right img:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .sub_content .sub_footer_icon {
   display: block;
   margin: 50px auto;
