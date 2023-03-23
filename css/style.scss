@@ -33,6 +33,72 @@ a{
   }
 }
 
+// 共通
+// ボタンスタイル
+a.btn_24 {
+	padding: 10px 13px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 12%;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #EAD817;
+  color: #EAD817;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.2s ease-in;
+  margin: 50px 0 0 90px;
+}
+a.btn_24:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+a.btn_24:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #EAD817;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+a.btn_24:hover {
+  color: #ffffff;
+  border: 1px solid #EAD817;
+}
+
+a.btn_24:hover:before {
+  top: -35%;
+  background-color: #EAD817;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+a.btn_24:hover:after {
+  top: -45%;
+  background-color: #EAD817;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
 // TOPページ
 .main_visual{
   display: flex;
@@ -341,11 +407,8 @@ a{
       margin-top: 32px;
       a{
         width: 23%;
-        background: #EBDC1F;
-        text-align: center;
-        line-height: 31px;
-        border-radius: 8px;
-        height: 30px;
+        height: 38px;
+        margin: 0;
       }
       .representative_name{
         text-align: right;
@@ -374,6 +437,117 @@ a{
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+// 経歴ページ
+.career_container{
+  display: flex;
+  padding: 0 80px;
+  .career_left{
+    width: 60%;
+    position: relative;
+    .career_images{
+      position: relative;
+      .career_representative_name{
+        position: absolute;
+        z-index: 2;
+        top: 34%;
+        right: 17%;
+        p{
+          font-size: 2.25rem;
+          color: black;
+          font-family: YuKyokasho Yoko;
+          font-weight: bold;
+          position: relative;
+          z-index: 1;
+          left: 1%;
+        }
+        span{
+          bottom: -4px;
+          left: 44%;
+          position: absolute;
+          font-family: Caveat;
+          font-size: 1.4rem;
+          width: 70%;
+          color: white;
+        }
+      }
+      img{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .background_image{
+        background: rgba(121, 121, 121, 0.631372549);
+        color: white;
+        text-align: center;
+        width: 71%;
+        margin: 0 auto;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        p{
+          font-family: YuKyokasho Yoko;
+        }
+      }
+    }
+    .center_content{
+      align-items: center;
+      position: absolute;
+      justify-content: space-around;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      z-index: 1;
+      right: -7%;
+      width: 14%;
+      height: 79%;
+      img{
+        background: #F2F2F2;
+        width: 100%;
+        border-radius: 150%;
+        padding: 14px;
+      }
+    }
+  }
+  .career_right{
+    width: 40%;
+    margin-left: 102px;
+    .career_content{
+      margin-bottom: 36px;
+      line-height: 24px;
+      .career_title{
+        margin-bottom: 10px;
+        background: #EAD817;
+        width: 25%;
+        text-align: center;
+        padding: 5px 0;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
+    .achievement{
+      line-height: 28px;
+      .achievement_title{
+        margin-bottom: 10px;
+        background: #EAD817;
+        width: 25%;
+        text-align: center;
+        padding: 5px 0;
+        font-weight: bold;
+        font-size: 0.8rem;
+        line-height: 24px;
+      }
+      div{
+        margin-bottom: 20px;
+        p:nth-of-type(2){
+          padding-left: 10px;
+        }
+      }
     }
   }
 }
