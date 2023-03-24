@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Merienda");
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Amatic SC", "Montserrat", sans-serif;
   background-color: #F2F2F2;
 }
 
@@ -29,7 +29,7 @@ a {
   margin-left: 25px;
 }
 .header .header_right li a {
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: black;
 }
 
@@ -548,6 +548,130 @@ a.btn_24:hover:after {
   padding-left: 10px;
 }
 
+.business_top_image {
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+}
+
+.business_container {
+  padding: 0 190px;
+}
+.business_container .business_page_title {
+  width: 41%;
+  height: 56px;
+  display: flex;
+  margin: 15px 0 50px 0;
+}
+.business_container .business_page_title img {
+  width: 13%;
+  height: 100%;
+}
+.business_container .business_page_title .business_title_right {
+  margin-left: 9px;
+  line-height: 27px;
+}
+.business_container .business_page_title .business_title_right p {
+  font-family: "Amatic SC", cursive;
+  font-size: 17px;
+}
+.business_container .business_page_title .business_title_right h3 {
+  font-size: 23px;
+}
+.business_container .business_content {
+  display: flex;
+  justify-content: space-between;
+}
+.business_container .business_content .business_content_left {
+  width: 41%;
+  padding-top: 40px;
+}
+.business_container .business_content .business_content_left h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 33px;
+}
+.business_container .business_content .business_content_left p {
+  line-height: 26px;
+  margin-left: 24px;
+}
+.business_container .business_content .business_content_right {
+  width: 47%;
+}
+.business_container .business_content .business_content_right img {
+  width: 100%;
+}
+
+.business_introduction {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+.business_introduction .introduction_title {
+  display: flex;
+  align-items: center;
+  padding: 0 190px;
+}
+.business_introduction .introduction_title h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  position: relative;
+}
+.business_introduction h1 {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 190px;
+}
+.business_introduction .three_business {
+  display: flex;
+  flex-direction: column;
+}
+.business_introduction .three_business .homepage, .business_introduction .three_business .sns, .business_introduction .three_business .money {
+  display: flex;
+  padding: 75px 190px;
+}
+.business_introduction .three_business .homepage .homepage_left, .business_introduction .three_business .homepage .sns_left, .business_introduction .three_business .homepage .money_left, .business_introduction .three_business .sns .homepage_left, .business_introduction .three_business .sns .sns_left, .business_introduction .three_business .sns .money_left, .business_introduction .three_business .money .homepage_left, .business_introduction .three_business .money .sns_left, .business_introduction .three_business .money .money_left {
+  width: 40%;
+}
+.business_introduction .three_business .homepage .homepage_left h2, .business_introduction .three_business .homepage .sns_left h2, .business_introduction .three_business .homepage .money_left h2, .business_introduction .three_business .sns .homepage_left h2, .business_introduction .three_business .sns .sns_left h2, .business_introduction .three_business .sns .money_left h2, .business_introduction .three_business .money .homepage_left h2, .business_introduction .three_business .money .sns_left h2, .business_introduction .three_business .money .money_left h2 {
+  font-weight: bold;
+  font-size: 4.5rem;
+  line-height: 62px;
+  display: inline;
+  font-family: "Amatic SC";
+  color: #A36A00;
+}
+.business_introduction .three_business .homepage .homepage_left span, .business_introduction .three_business .homepage .sns_left span, .business_introduction .three_business .homepage .money_left span, .business_introduction .three_business .sns .homepage_left span, .business_introduction .three_business .sns .sns_left span, .business_introduction .three_business .sns .money_left span, .business_introduction .three_business .money .homepage_left span, .business_introduction .three_business .money .sns_left span, .business_introduction .three_business .money .money_left span {
+  font-size: 1.5rem;
+}
+.business_introduction .three_business .homepage .homepage_left p, .business_introduction .three_business .homepage .sns_left p, .business_introduction .three_business .homepage .money_left p, .business_introduction .three_business .sns .homepage_left p, .business_introduction .three_business .sns .sns_left p, .business_introduction .three_business .sns .money_left p, .business_introduction .three_business .money .homepage_left p, .business_introduction .three_business .money .sns_left p, .business_introduction .three_business .money .money_left p {
+  font-weight: bold;
+}
+.business_introduction .three_business .homepage .homepage_right, .business_introduction .three_business .homepage .sns_right, .business_introduction .three_business .homepage .money_right, .business_introduction .three_business .sns .homepage_right, .business_introduction .three_business .sns .sns_right, .business_introduction .three_business .sns .money_right, .business_introduction .three_business .money .homepage_right, .business_introduction .three_business .money .sns_right, .business_introduction .three_business .money .money_right {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  line-height: 32px;
+}
+.business_introduction .three_business .homepage {
+  border-top: 1px solid #A0A0A0;
+}
+.business_introduction .three_business .sns {
+  border-top: 1px solid #A0A0A0;
+  border-bottom: 1px solid #A0A0A0;
+}
+.business_introduction .three_business .money {
+  border-bottom: 1px solid #A0A0A0;
+}
+.business_introduction .three_business a:hover {
+  background: #bababa;
+  color: white;
+  transition: 0.5s;
+}
+
 .sub_content .sub_footer_icon {
   display: block;
   margin: 50px auto;
@@ -567,6 +691,7 @@ a.btn_24:hover:after {
   width: 200px;
   height: 200px; /* 一枚の写真のサイズを240px × 240pxに設定 */
   margin: 0 13px; /* 一枚一枚の間隔を13pxに設定 */
+  object-fit: cover;
 }
 .sub_content p {
   text-align: center;
