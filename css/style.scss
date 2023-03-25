@@ -1,6 +1,8 @@
 body{
   font-family: "Amatic SC",'Montserrat', sans-serif;
   background-color: #F2F2F2;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 a{
   color: black;
@@ -766,7 +768,7 @@ a{
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  height: 150px;
+  height: 200px;
   justify-content: space-between;
   .service_part_row{
     display: flex;
@@ -788,7 +790,7 @@ a{
   margin: 25px 0;
 }
 .feature_list{
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   line-height: 45px;
   letter-spacing: 2px;
 }
@@ -823,7 +825,7 @@ a{
 .sub_content{
   .sub_footer_icon{
     display: block;
-    margin: 50px auto;
+    margin: 100px auto;
     position: relative;
   }
   .line{
