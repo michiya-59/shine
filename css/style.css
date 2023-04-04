@@ -1057,15 +1057,15 @@ body {
   }
 }
 
-.career_button {
-  width: 30%;
-  font-size: 1.2rem;
+@media screen and (max-width: 1024px) {
+  .career_button {
+    width: 30%;
+    font-size: 1.2rem;
+  }
+  .back_button {
+    margin-left: 40px;
+  }
 }
-
-.back_button {
-  margin-left: 40px;
-}
-
 .career_container {
   display: flex;
   padding: 0 80px;

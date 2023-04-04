@@ -968,12 +968,14 @@ content:"";
     }
   }
 }
-.career_button{
-  width: 30%;
-  font-size: 1.2rem;
-}
-.back_button{
-  margin-left: 40px;
+@include tablet.tablet_media{
+  .career_button{
+    width: 30%;
+    font-size: 1.2rem;
+  }
+  .back_button{
+    margin-left: 40px;
+  }
 }
 
 // 経歴ページ
