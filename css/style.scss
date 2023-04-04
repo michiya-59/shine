@@ -1,3 +1,6 @@
+@use "tablet_responsive" as tablet;
+@use "phone_responsive" as mobile;
+
 body{
   font-family: "Amatic SC",'Montserrat', sans-serif;
   background-color: #F2F2F2;
@@ -12,6 +15,9 @@ body{
   display: flex;
   padding: 20px 50px;
   justify-content: space-between;
+  @include tablet.tablet_media{
+    padding: 20px 41px;;
+  }
   .header_left{
     width: 95px;
     img{
@@ -22,6 +28,9 @@ body{
   .header_right{
     display: flex;
     align-items: center;
+    @include tablet.tablet_media{
+      display: none;
+    }
     li{
       margin-left: 25px;
       a{
@@ -30,6 +39,94 @@ body{
       }
     }
   }
+}
+
+.hamburger_menu{
+  display: block;
+  position: fixed;
+  width: 46px;
+  height: 42px;
+  right: 0;
+  margin: 24px 10px 0 0;
+  z-index: 10;
+  transition: .5s;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  @include tablet.tablet_media{
+    opacity: 1;
+    pointer-events: visible;
+    margin-top: 15px;
+    margin: 21px 0 0 0;
+    right: 5%;
+    span{
+      width: 100%;
+      height: 1px;
+      background-color: #383838;
+      position: absolute;
+      left: 3px;
+    }
+    span:nth-child(1){
+      top: 5px;
+      transition: .5s;
+    }
+    span:nth-child(2){
+      top: 17px;
+      transition: .5s;
+    }
+    span:nth-child(3){
+      top: 30px;
+      transition: .5s;
+    }
+  }
+}
+.hamburger_menu.active span:nth-child(1){
+  transform: translateY(11px) rotate(405deg);
+  transition: .5s;
+  background-color: #fff;
+}
+.hamburger_menu.active span:nth-child(2){
+  opacity: 0;
+  transition: .5s;
+  background-color: #fff;
+}
+.hamburger_menu.active span:nth-child(3){
+  transform: translateY(-14px) rotate(315deg);
+  transition: .5s;
+  background-color: #fff;
+}
+
+.mask_menu{
+  position: fixed;
+  background: #282F35;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-500px);
+  transition: .5s;
+  ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    li{
+      display: inline-block;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: white;
+    }
+  }
+}
+.mask_menu.active{
+  transform: translateY(0px);
+  transition: .5s;
+  opacity: 1;
+  pointer-events: visible;
+  z-index: 3;
 }
 
 // 共通
@@ -50,6 +147,10 @@ body{
   z-index: 1;
   transition: all 0.2s ease-in;
   margin: 50px 0 0 90px;
+  @include tablet.tablet_media{
+    width: 25%;
+    font-size: 1.5rem;
+  }
 }
 .btn_24:before {
   content: "";
@@ -107,6 +208,10 @@ body{
     list-style: none;
     padding: 0;
     font-size: .9em;
+    @include tablet.tablet_media{
+      font-size: 1rem;
+      padding: 0 30px;
+    }
     li{
       display: flex;
       align-items: center;
@@ -133,6 +238,9 @@ body{
       color: #949494;
       text-decoration: none;
       font-size: 0.75rem;
+      @include tablet.tablet_media{
+        font-size: 1rem;
+      }
       &:hover{
         color: black;
       }
@@ -141,18 +249,27 @@ body{
 }
 .pankuzu{
   padding: 0 190px;
+  @include tablet.tablet_media{
+    padding: 0;
+  }
 }
 .pankuzu_message{
   padding: 0 100px;
+  @include tablet.tablet_media{
+    padding: 0;
+  }
 }
 .pankuzu_career{
   padding: 0 80px;
+  @include tablet.tablet_media{
+    padding: 0;
+  }
 }
 
 // ロード画面のスタイル
 .loader-bg {
-  width: 100vw;
-  height: 100vh;
+  width: 102vw;
+  height: 102vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -317,6 +434,11 @@ body{
   bottom: 10px;
   right: 63px;
   height: 100px;
+  @include tablet.tablet_media{
+    right: 25px;
+    bottom: 0px;
+    height: 65px;
+  }
 }
 
 /*Scrollテキストの描写*/
@@ -350,11 +472,18 @@ body{
   background:#9E9E9E;
   /*丸の動き1.6秒かけて透過し、永遠にループ*/
   animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+  @include tablet.tablet_media{
+    animation: circlemove_tablet 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+  }
 }
 
 /*下からの距離が変化して丸の全体が上から下に動く*/
 @keyframes circlemove{
   0%{bottom: 100px;}
+  100%{bottom: 0px;}
+}
+@keyframes circlemove_tablet{
+  0%{bottom: 65px;}
   100%{bottom: 0px;}
 }
 
@@ -388,6 +517,9 @@ content:"";
     width: 63%;
     overflow: hidden;
     margin:0 auto;
+    @include tablet.tablet_media{
+      width: 76%;
+    }
     img{
       max-width: 100%;
       height: 100%;
@@ -408,18 +540,25 @@ content:"";
       color: rgb(0 0 0 / 50%);
       letter-spacing: 6px;
       font-weight: bold;
+      @include tablet.tablet_media{
+        font-size: 0.875rem;
+        top: 12%;
+      }
       p:nth-of-type(1){
         margin-left: 16px;
       }
       p:nth-of-type(2) {
         padding-top: 100px;
+        @include tablet.tablet_media{
+          padding-top: 33px;
+        }
       }
     }
     canvas{
       position: absolute;
-      bottom: 0;
-      left:0;
-      width: 100%;
+      bottom: -1px;
+      left: 0;
+      width: 101%;
     }
   }
   .main_visual_right{
@@ -438,10 +577,25 @@ content:"";
     .right_bottom p:nth-of-type(1) {
       font-size: 1.25rem;
     }
+    @include tablet.tablet_media{
+      width: 24%;
+      .right_top{
+        width: 50%;
+      }
+      .right_bottom p{
+        font-size: 0.875rem;
+      }
+      .right_bottom p:nth-of-type(1) {
+        font-size: 1rem;
+      }
+    }
   }
 }
 .main_content{
   padding: 0 190px;
+  @include tablet.tablet_media{
+    padding: 0 40px;
+  }
   .company_explanation{
     position: relative;
     .company_founding_reason, .our_thoughts{
@@ -457,6 +611,14 @@ content:"";
         letter-spacing: 2px;
         line-height: 25px;
         padding-left: 25px;
+      }
+      @include tablet.tablet_media{
+        h1{
+          font-size: 2.5rem;
+        }
+        p{
+          width: 76%;
+        }
       }
     }
     img{
@@ -482,14 +644,24 @@ content:"";
         height: 500px;
         object-fit: cover;
         position: absolute;
+        @include tablet.tablet_media{
+          width: 275px;
+          height: 479px;
+        }
       }
       img:nth-of-type(1) {
         left: 17%;
         top: -25%;
+        @include tablet.tablet_media{
+          left: 8%;
+        }
       }
       img:nth-of-type(2) {
         right: 17%;
         top: 25%;
+        @include tablet.tablet_media{
+          right: 7%;
+        }
       }
     }
     .dotted_line_box{
@@ -510,6 +682,11 @@ content:"";
       font-family: 'Amatic SC', cursive;
       font-size: 5rem;
       transform: rotate(-20deg);
+      @include tablet.tablet_media{
+        font-size: 4.2rem;
+        right: 5%;
+        top: -7%;
+      }
     }
   }
 }
@@ -590,17 +767,38 @@ content:"";
       background-image: url('../image/AdobeStock_358963151_Preview.jpeg');
     }
   }
+  @include tablet.tablet_media{
+    padding: 70px 40px 55px 40px;
+    .menu_content_title{
+      font-size: 2.5rem;
+      left: 6%;
+      top: 2%;
+    }
+    .menu_list{
+      height: 100%;
+      a{
+        height: 180px;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
 
 // 問い合わせページ
 .container{
   padding: 0 190px;
   margin-top: 30px;
+  @include tablet.tablet_media{
+    padding: 0 30px;
+  }
   .contact_page_title{
     width: 20%;
     height: 56px;
     display: flex;
     margin-bottom: 51px;
+    @include tablet.tablet_media{
+      width: 29%;
+    }
     img{
       width: 27%;
       height: 100%;
@@ -632,6 +830,10 @@ content:"";
       align-items: center;
       img{
         height: 100%;
+        @include tablet.tablet_media{
+          height: 75%;
+          width: 6%;
+        }
       }
       .contact_detail_p{
         margin-left: 29px;
@@ -641,6 +843,9 @@ content:"";
     p{
       line-height: 22px;
       margin-top: 25px;
+      @include tablet.tablet_media{
+        margin-top: 0px;
+      }
     }
   }
 }
@@ -653,11 +858,23 @@ content:"";
   margin-bottom: 164px;
   padding: 0 0 0 100px;
   margin-top: 30px;
+  @include tablet.tablet_media{
+    padding: 0 30px;
+    height: 100%;
+    flex-direction: column-reverse;
+    margin-top: 10px;
+  }
   .representatice_page_title{
     width: 32%;
     height: 56px;
     display: flex;
     margin-bottom: 51px;
+    @include tablet.tablet_media{
+      width: 28%;
+      z-index: 1;
+      position: relative;
+      margin-bottom: 30px;
+    }
     img{
       width: 27%;
       height: 100%;
@@ -681,6 +898,9 @@ content:"";
     width: 45%;
     margin-right: 35px;
     height: 100%;
+    @include tablet.tablet_media{
+      width: 100%;
+    }
     .contact_page_title{
       width: 32%;
       height: 56px;
@@ -696,6 +916,9 @@ content:"";
         width: 23%;
         height: 38px;
         margin: 0;
+        @include tablet.tablet_media{
+          height: 46px;
+        }
       }
       .representative_name{
         text-align: right;
@@ -714,18 +937,43 @@ content:"";
     width: 50%;
     position: relative;
     display: flex;
+    @include tablet.tablet_media{
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
     img:nth-of-type(1){
       position: absolute;
       height: 960px;
       top: -93px;
       left: -85px;
+      @include tablet.tablet_media{
+        display: none;
+      }
     }
     img:nth-of-type(2){
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+    img:nth-of-type(3){
+      display: none;
+      @include tablet.tablet_media{
+        display: block;
+        position: absolute;
+        bottom: -40px;
+      }
+    }
   }
+}
+.career_button{
+  width: 30%;
+  font-size: 1.2rem;
+}
+.back_button{
+  margin-left: 40px;
 }
 
 // 経歴ページ
@@ -733,9 +981,17 @@ content:"";
   display: flex;
   padding: 0 80px;
   margin-top: 30px;
+  @include tablet.tablet_media{
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 0;
+  }
   .career_left{
     width: 60%;
     position: relative;
+    @include tablet.tablet_media{
+      width: 100%;
+    }
     .career_images{
       position: relative;
       .career_representative_name{
@@ -794,6 +1050,9 @@ content:"";
       right: -7%;
       width: 14%;
       height: 79%;
+      @include tablet.tablet_media{
+        display: none;
+      }
       img{
         background: #F2F2F2;
         width: 100%;
@@ -805,6 +1064,11 @@ content:"";
   .career_right{
     width: 40%;
     margin-left: 102px;
+    @include tablet.tablet_media{
+      width: 100%;
+      margin: 0;
+      padding: 65px 30px 0 30px;
+    }
     .career_content{
       margin-bottom: 36px;
       line-height: 24px;
@@ -816,6 +1080,11 @@ content:"";
         padding: 5px 0;
         font-weight: bold;
         font-size: 0.8rem;
+      }
+      @include tablet.tablet_media{
+        p:not(:nth-of-type(1)){
+          padding-left: 15px;
+        }
       }
     }
     .achievement{
@@ -832,6 +1101,9 @@ content:"";
       }
       div{
         margin-bottom: 20px;
+        @include tablet.tablet_media{
+          padding-left: 15px;
+        }
         p:nth-of-type(2){
           padding-left: 10px;
         }
@@ -855,6 +1127,9 @@ content:"";
     height: 56px;
     display: flex;
     margin: 15px 0 50px 0;
+    @include tablet.tablet_media{
+      width: 65%;
+    }
     img{
       width: 13%;
       height: 100%;
@@ -895,6 +1170,25 @@ content:"";
       }
     }
   }
+  @include tablet.tablet_media{
+    padding: 0 30px;
+    .business_page_title{
+      margin: 15px 0 10px 0;
+    }
+    .business_content{
+      flex-direction: column;
+      .business_content_left{
+        width: 100%;
+        p{
+          line-height: 22px;
+        }
+      }
+      .business_content_right{
+        width: 44%;
+        margin-left: auto;
+      }
+    }
+  }
 }
 .business_introduction{
   margin-top: 150px;
@@ -923,6 +1217,9 @@ content:"";
     .homepage, .sns, .money{
       display: flex;
       padding: 75px 190px;
+      @include tablet.tablet_media{
+        padding: 37px 80px;
+      }
       .homepage_left, .sns_left, .money_left{
         width: 40%;
         h2{
@@ -932,12 +1229,18 @@ content:"";
           display: inline;
           font-family: 'Amatic SC';
           color: #A36A00;
+          @include tablet.tablet_media{
+            font-size: 3rem;
+          }
         }
         span{
           font-size: 1.5rem;
         }
         p{
           font-weight: bold;
+          @include tablet.tablet_media{
+            font-size: 0.875rem;
+          }
         }
       }
       .homepage_right, .sns_right, .money_right{
@@ -945,6 +1248,9 @@ content:"";
         width: 60%;
         align-items: center;
         line-height: 32px;
+        @include tablet.tablet_media{
+          line-height: 22px;
+        }
       }
     }
     .homepage{
@@ -962,6 +1268,16 @@ content:"";
       background: #bababa;
       color: white;
       transition: 0.5s;
+    }
+  }
+  @include tablet.tablet_media{
+    margin-top: 0;
+    .introduction_title{
+      padding: 0 30px;
+    }
+    h1{
+      padding: 0 30px;
+      margin: 20px 0 40px 0;
     }
   }
 }
@@ -985,6 +1301,9 @@ content:"";
 .homepage_container{
   padding: 0 190px;
   margin-top: 30px;
+  @include tablet.tablet_media{
+    padding: 0 30px;
+  }
   h3{
     font-size: 1.5rem;
     text-align: center;
@@ -994,17 +1313,31 @@ content:"";
   .service_homepage_content{
     display: flex;
     justify-content: space-between;
+    @include tablet.tablet_media{
+      margin-bottom: 100px;
+    }
     .service_homepage_content_left{
       width: 58%;
       height: 100%;
       line-height: 26px;
       padding-top: 40px;
+      @include tablet.tablet_media{
+        line-height: 22px;
+        width: 56%;
+      }
     }
     .service_homepage_content_right{
       width: 33%;
       img{
         width: 100%;
         height: 100%;
+      }
+      @include tablet.tablet_media{
+        width: 40%;
+        padding-top: 27px;
+        img{
+          object-fit: contain;
+        }
       }
     }
   }
@@ -1043,6 +1376,9 @@ content:"";
 .money_container{
   padding: 0 190px;
   margin-top: 30px;
+  @include tablet.tablet_media{
+    padding: 0 30px;
+  }
   h3{
     font-size: 1.5rem;
     text-align: center;
@@ -1070,6 +1406,9 @@ content:"";
       padding-bottom: 5px;
       width: 41%;
       border-bottom: 1px solid #868686;
+      @include tablet.tablet_media{
+        width: 50%;
+      }
     }
   }
 }
@@ -1078,6 +1417,9 @@ content:"";
 .company_container{
   padding: 0 190px;
   margin-top: 30px;
+  @include tablet.tablet_media{
+    padding: 0 30px;
+  }
   .company_page_title{
     width: 20%;
     height: 56px;
@@ -1184,10 +1526,17 @@ content:"";
 // 共通
 // フッタースタイル
 .sub_content{
-  .sub_footer_icon{
-    display: block;
-    margin: 100px auto;
-    position: relative;
+  .content{
+    overflow: hidden;
+    .sub_footer_icon{
+      display: block;
+      margin: 100px auto;
+      position: relative;
+      @include tablet.tablet_media{
+        width: 120px;
+        margin: 80px auto 40px auto;
+      }
+    }
   }
   .line{
     background: black;
@@ -1203,6 +1552,10 @@ content:"";
       height: 200px; /* 一枚の写真のサイズを240px × 240pxに設定 */
       margin: 0 13px; /* 一枚一枚の間隔を13pxに設定 */
       object-fit: cover;
+      @include tablet.tablet_media{
+        width: 106px;
+        height: 104px;
+      }
     }
   }
   p{
@@ -1223,6 +1576,9 @@ footer{
     display: flex;
     padding: 30px 190px;
     margin-top: 150px;
+    @include tablet.tablet_media{
+      padding: 40px 50px;
+    }
     .footer_left{
       width: 38%;
       text-align: center;
@@ -1235,6 +1591,9 @@ footer{
       align-items: center;
       font-family: 'Amatic SC', cursive;
       font-size: 26px;
+      @include tablet.tablet_media{
+        width: 62%;
+      }
     }
   }
   p{

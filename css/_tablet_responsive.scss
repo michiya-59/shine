@@ -1,0 +1,7 @@
+// 1024px以下の場合
+@mixin tablet_media{
+  @media screen and (max-width : 1024px) {
+    @content
+  }
+}
+
