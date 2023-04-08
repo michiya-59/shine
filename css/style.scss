@@ -2075,6 +2075,9 @@ content:"";
     margin: 58px 0;
     font-weight: bold;
     font-family: sans-serif;
+    @include mobile.mobile_media{
+      font-size: 0.8rem;
+    }
   }
   a{
     margin: 0 auto;

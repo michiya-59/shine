@@ -2385,6 +2385,11 @@ body {
   font-weight: bold;
   font-family: sans-serif;
 }
+@media screen and (max-width: 599px) {
+  .sub_content p {
+    font-size: 0.8rem;
+  }
+}
 .sub_content a {
   margin: 0 auto;
 }
