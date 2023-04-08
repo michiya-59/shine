@@ -501,6 +501,9 @@ body{
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
+  @include mobile.mobile_media{
+    font-size: 0.5rem;
+  }
 }
 
 /* 丸の描写 */
@@ -519,6 +522,11 @@ body{
   animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
   @include tablet.tablet_media{
     animation: circlemove_tablet 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+  }
+  @include mobile.mobile_media{
+    left: -3.5px;
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -551,6 +559,9 @@ content:"";
   width:2px;
   height: 100%;
   background: #9E9E9E;
+  @include mobile.mobile_media{
+    width: 1px;
+  }
 }
 
 // TOPページ
@@ -602,8 +613,8 @@ content:"";
         top: 12%;
       }
       @include mobile.mobile_media{
-        font-size: 1.05rem;
-        right: 12%;
+        font-size: 0.875rem;
+        right: 14%;
       }
       p:nth-of-type(1){
         margin-left: 16px;
