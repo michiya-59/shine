@@ -94,8 +94,8 @@ body {
 }
 @media screen and (max-width: 599px) {
   .hamburger_menu {
-    margin-top: 12px;
-    width: 37px;
+    margin-top: 6px;
+    width: 32px;
     right: 7%;
   }
   .hamburger_menu span:nth-child(2) {
@@ -1184,7 +1184,7 @@ body {
 }
 @media screen and (max-width: 599px) {
   .container .contact_tel .contact_detail .contact_detail_p, .container .contact_mail .contact_detail .contact_detail_p, .container .contact_line .contact_detail .contact_detail_p {
-    font-size: 0.875rem;
+    font-size: 1.1rem;
     margin-bottom: 0px;
   }
 }

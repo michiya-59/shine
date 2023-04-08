@@ -93,8 +93,8 @@ body{
     }
   }
   @include mobile.mobile_media{
-    margin-top: 12px;
-    width: 37px;
+    margin-top: 6px;
+    width: 32px;
     right: 7%;
     span:nth-child(2){
       top: 15px;
@@ -1023,7 +1023,7 @@ content:"";
         margin-left: 29px;
         font-size: 1.25rem;
         @include mobile.mobile_media{
-          font-size: 0.875rem;
+          font-size: 1.1rem;
           margin-bottom: 0px;
         }
       }
