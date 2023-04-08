@@ -20,4 +20,6 @@ function highlightOnScroll() {
   });
 }
 
-document.addEventListener('scroll', highlightOnScroll);
+window.addEventListener('load', () => {
+  document.addEventListener('scroll', highlightOnScroll);
+});
