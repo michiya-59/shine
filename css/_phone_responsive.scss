@@ -1,5 +1,5 @@
 // 599px以下の場合
-@mixin tablet_media{
+@mixin mobile_media{
   @media screen and (max-width : 599px) {
     @content
   }
