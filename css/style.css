@@ -1703,6 +1703,7 @@ body {
     flex-direction: column;
     border: none;
     padding: 0;
+    flex-wrap: wrap;
   }
 }
 .business_introduction .three_business .homepage .homepage_left, .business_introduction .three_business .homepage .sns_left, .business_introduction .three_business .homepage .money_left, .business_introduction .three_business .sns .homepage_left, .business_introduction .three_business .sns .sns_left, .business_introduction .three_business .sns .money_left, .business_introduction .three_business .money .homepage_left, .business_introduction .three_business .money .sns_left, .business_introduction .three_business .money .money_left {
