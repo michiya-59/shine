@@ -940,7 +940,7 @@ body {
 
 .menu_content {
   padding: 127px 190px 75px 190px;
-  background: url("../image/circle.png") repeat;
+  background: url("../image/circle.webp") repeat;
   animation: fall 18s infinite linear;
   background-size: contain;
   background-color: #E3E2E0;
@@ -1045,7 +1045,7 @@ body {
 }
 .menu_content .menu_list a:nth-of-type(1) {
   width: 55%;
-  background-image: url("../image/S__55779361.jpg");
+  background-image: url("../image/S__55779361.webp");
 }
 @media screen and (max-width: 599px) {
   .menu_content .menu_list a:nth-of-type(1) {
@@ -1055,7 +1055,7 @@ body {
 }
 .menu_content .menu_list a:nth-of-type(2) {
   width: 43%;
-  background-image: url("../image/25803090_s.jpg");
+  background-image: url("../image/25803090_s.webp");
 }
 @media screen and (max-width: 599px) {
   .menu_content .menu_list a:nth-of-type(2) {
@@ -1065,7 +1065,7 @@ body {
 }
 .menu_content .menu_list a:nth-of-type(3) {
   width: 49%;
-  background-image: url("../image/2805271_s.jpg");
+  background-image: url("../image/2805271_s.webp");
 }
 @media screen and (max-width: 599px) {
   .menu_content .menu_list a:nth-of-type(3) {
@@ -1075,7 +1075,7 @@ body {
 }
 .menu_content .menu_list a:nth-of-type(4) {
   width: 49%;
-  background-image: url("../image/AdobeStock_358963151_Preview.jpeg");
+  background-image: url("../image/AdobeStock_358963151_Preview.webp");
 }
 @media screen and (max-width: 599px) {
   .menu_content .menu_list a:nth-of-type(4) {
@@ -1131,8 +1131,8 @@ body {
   }
 }
 .container .contact_page_title .contact_title_right p {
-  font-family: "Amatic SC", cursive;
-  font-size: 1, 3rem;
+  font-family: "Amatic SC", "Montserrat", sans-serif;
+  font-size: 1.3rem;
 }
 @media screen and (max-width: 599px) {
   .container .contact_page_title .contact_title_right p {
@@ -1153,6 +1153,7 @@ body {
 @media screen and (max-width: 599px) {
   .container .contact_tel, .container .contact_mail, .container .contact_line {
     margin-bottom: 35px;
+    font-family: auto;
   }
 }
 .container .contact_tel h2, .container .contact_mail h2, .container .contact_line h2 {
@@ -1197,12 +1198,14 @@ body {
 }
 .container .contact_tel .contact_detail .contact_detail_p, .container .contact_mail .contact_detail .contact_detail_p, .container .contact_line .contact_detail .contact_detail_p {
   margin-left: 29px;
-  font-size: 1.25rem;
+  font-family: auto;
+  font-size: 1rem;
+  margin-top: 8px;
 }
 @media screen and (max-width: 599px) {
   .container .contact_tel .contact_detail .contact_detail_p, .container .contact_mail .contact_detail .contact_detail_p, .container .contact_line .contact_detail .contact_detail_p {
-    font-size: 1.1rem;
-    margin-bottom: 0px;
+    font-size: 0.75rem;
+    margin-top: 0px;
   }
 }
 .container .contact_tel p, .container .contact_mail p, .container .contact_line p {
@@ -1216,8 +1219,9 @@ body {
 }
 @media screen and (max-width: 599px) {
   .container .contact_tel p, .container .contact_mail p, .container .contact_line p {
-    font-size: 0.875rem;
     margin-bottom: 0px;
+    font-size: 0.75rem;
+    font-family: auto;
   }
 }
 
@@ -1756,7 +1760,7 @@ body {
 }
 @media screen and (max-width: 599px) {
   .business_introduction .three_business .homepage .homepage_left, .business_introduction .three_business .sns .homepage_left, .business_introduction .three_business .money .homepage_left {
-    background-image: url("../image/25285453_s.jpg");
+    background-image: url("../image/25285453_s.webp");
     background-position: left;
     background-size: cover;
     color: white;
@@ -1772,7 +1776,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2); /* 黒色と透明度の指定 */
   }
   .business_introduction .three_business .homepage .sns_left, .business_introduction .three_business .sns .sns_left, .business_introduction .three_business .money .sns_left {
-    background-image: url("../image/sns_link_image.jpg");
+    background-image: url("../image/sns_link_image.webp");
     background-position: left;
     background-size: cover;
     color: white;
@@ -1788,7 +1792,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2); /* 黒色と透明度の指定 */
   }
   .business_introduction .three_business .homepage .money_left, .business_introduction .three_business .sns .money_left, .business_introduction .three_business .money .money_left {
-    background-image: url("../image/24316319_s.jpg");
+    background-image: url("../image/24316319_s.webp");
     background-position: left;
     background-size: cover;
     color: white;
@@ -1881,7 +1885,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("../image/circle2.png") repeat;
+  background: url("../image/circle2.webp") repeat;
   animation: fall 18s infinite linear;
 }
 .detail_title h1 {
