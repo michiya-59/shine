@@ -2228,9 +2228,16 @@ body {
     font-size: 0.875rem;
   }
 }
+.company_container .company_info_list .company_info_parts .company_info_parts_right {
+  font-family: auto;
+  font-size: 0.875rem;
+}
 @media screen and (max-width: 599px) {
   .company_container .company_info_list .company_info_parts .company_info_parts_right {
-    font-size: 0.875rem;
+    font-size: 0.7rem;
+  }
+  .company_container .company_info_list .company_info_parts .company_info_parts_right .address {
+    font-size: 0.65rem;
   }
 }
 .company_container .company_info_list .company_info_parts_business {
@@ -2255,10 +2262,11 @@ body {
 }
 .company_container .company_info_list .company_info_parts_business .company_info_parts_right .business_lists {
   line-height: 25px;
+  font-size: 0.875rem;
 }
 @media screen and (max-width: 599px) {
   .company_container .company_info_list .company_info_parts_business .company_info_parts_right .business_lists p {
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     line-height: 20px;
   }
 }

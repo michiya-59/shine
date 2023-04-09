@@ -1932,8 +1932,13 @@ content:"";
         }
       }
       .company_info_parts_right{
+        font-family: auto;
+        font-size: 0.875rem;
         @include mobile.mobile_media{
-          font-size: 0.875rem;
+          .address{
+            font-size: 0.65rem;
+          }
+          font-size: 0.7rem;
         }
       }
     }
@@ -1956,9 +1961,10 @@ content:"";
       }
       .company_info_parts_right .business_lists{
         line-height: 25px;
+        font-size: 0.875rem;
         @include mobile.mobile_media{
           p{
-            font-size: 0.875rem;
+            font-size: 0.7rem;
             line-height: 20px;
           }
         }
