@@ -479,6 +479,12 @@ body {
   height: 90px;
   text-decoration: none;
 }
+@media screen and (max-width: 599px) {
+  #page_top a {
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+}
 
 #page_top a::before {
   font-family: "Font Awesome 5 Free";
@@ -1454,6 +1460,11 @@ body {
 }
 .career_container .career_left .career_images .background_image p {
   font-family: YuKyokasho Yoko;
+}
+@media screen and (max-width: 599px) {
+  .career_container .career_left .career_images .background_image p {
+    font-size: 14px;
+  }
 }
 .career_container .career_left .center_content {
   align-items: center;
