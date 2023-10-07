@@ -747,7 +747,11 @@ content:"";
     height: 500px;
     @include mobile.mobile_media{
       height: 211px;
-      margin-bottom: 80px;
+      margin: 80px 0;
+    }
+    b{
+      position: absolute;
+      top: -40px;
     }
     .memory_image{
       width: 100%;
@@ -822,6 +826,26 @@ content:"";
         font-size: 1.6rem;
       }
     }
+  }
+}
+.new_img{
+  width: 61% !important;
+  height: 116% !important;
+  left: 20% !important;
+  top: -32px !important;
+  @include tablet.tablet_media{
+    width: 79% !important;
+    height: 108% !important;
+    left: 10% !important;
+    top: -21px !important;
+    box-shadow: 1px 1px 11px #bebebe !important;  
+  }
+  @include mobile.mobile_media{
+    width: 70% !important;
+    height: 118% !important;
+    left: 15% !important;
+    top: -16px !important;
+    box-shadow: 1px 1px 11px #bebebe !important;  
   }
 }
 .news{

@@ -842,8 +842,12 @@ body {
 @media screen and (max-width: 599px) {
   .main_content .our_memory {
     height: 211px;
-    margin-bottom: 80px;
+    margin: 80px 0;
   }
+}
+.main_content .our_memory b {
+  position: absolute;
+  top: -40px;
 }
 .main_content .our_memory .memory_image {
   width: 100%;
@@ -936,6 +940,31 @@ body {
 @media screen and (max-width: 599px) {
   .main_content .our_memory p {
     font-size: 1.6rem;
+  }
+}
+
+.new_img {
+  width: 61% !important;
+  height: 116% !important;
+  left: 20% !important;
+  top: -32px !important;
+}
+@media screen and (max-width: 1024px) {
+  .new_img {
+    width: 79% !important;
+    height: 108% !important;
+    left: 10% !important;
+    top: -21px !important;
+    box-shadow: 1px 1px 11px #bebebe !important;
+  }
+}
+@media screen and (max-width: 599px) {
+  .new_img {
+    width: 70% !important;
+    height: 118% !important;
+    left: 15% !important;
+    top: -16px !important;
+    box-shadow: 1px 1px 11px #bebebe !important;
   }
 }
 
