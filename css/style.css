@@ -960,10 +960,10 @@ body {
 }
 @media screen and (max-width: 599px) {
   .new_img {
-    width: 70% !important;
+    width: 79% !important;
     height: 118% !important;
-    left: 15% !important;
-    top: -16px !important;
+    left: 11% !important;
+    top: -18px !important;
     box-shadow: 1px 1px 11px #bebebe !important;
   }
 }
