@@ -1518,6 +1518,9 @@ content:"";
   height: 530px;
   object-fit: cover;
   margin-bottom: 15px;
+  @include mobile.mobile_media{
+    height: 20rem;
+  }
 }
 .business_container{
   padding: 0 190px;
@@ -1992,7 +1995,7 @@ content:"";
       }
       @include mobile.mobile_media{
         font-size: 0.875rem;
-        width: 45%;
+        width: 55%;
       }
     }
     @include mobile.mobile_media{
@@ -2184,7 +2187,7 @@ content:"";
   font-weight: bold;
   font-size: 2rem;
   @include mobile.mobile_media{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 .contact_homepage{
