@@ -733,6 +733,7 @@ content:"";
       right: 11%;
       top: 7px;
       width: 35%;
+      z-index: -1;
       @include mobile.mobile_media{
         right: 3%;
         top: 80px;
@@ -1094,22 +1095,14 @@ content:"";
       }
     }
     a:nth-of-type(1){
-      width: 55%;
-      background-image: url('../image/S__55779361.webp');
-      @include mobile.mobile_media{
-        width: 100%;
-        height: 140px;
-      }
-    }
-    a:nth-of-type(2){
-      width: 43%;
+      width: 49%;
       background-image: url('../image/25803090_s.webp');
       @include mobile.mobile_media{
         width: 100%;
         height: 140px;
       }
     }
-    a:nth-of-type(3){
+    a:nth-of-type(2){
       width: 49%;
       background-image: url('../image/2805271_s.webp');
       @include mobile.mobile_media{
@@ -1117,8 +1110,8 @@ content:"";
         height: 140px;
       }
     }
-    a:nth-of-type(4){
-      width: 49%;
+    a:nth-of-type(3){
+      width: 100%;
       background-image: url('../image/AdobeStock_358963151_Preview.webp');
       @include mobile.mobile_media{
         width: 100%;
@@ -1621,6 +1614,8 @@ content:"";
         margin-left: auto;
         @include mobile.mobile_media{
           width: 73%;
+          margin: 0 auto;
+          margin-top: 1rem;
         }
       }
     }
@@ -1737,7 +1732,7 @@ content:"";
           }
         }
         .money_left{
-          background-image: url('../image/24316319_s.webp');
+          background-image: url('../image/3504673_s.jpg');
           background-position: left;
           background-size: cover;
           color: white;
@@ -2231,7 +2226,7 @@ content:"";
     overflow: hidden;
     .sub_footer_icon{
       display: block;
-      margin: 100px auto;
+      margin: 50px auto;
       position: relative;
       @include tablet.tablet_media{
         width: 120px;
@@ -2251,7 +2246,7 @@ content:"";
     width: 1px;
     height: 67px;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @include mobile.mobile_media{
       height: 45px;
     }
@@ -2280,7 +2275,7 @@ content:"";
   }
   p{
     text-align: center;
-    margin: 58px 0;
+    margin: 40px 0 30px 0;
     font-weight: bold;
     font-family: sans-serif;
     @include mobile.mobile_media{
@@ -2298,7 +2293,10 @@ footer{
   .footer{
     display: flex;
     padding: 30px 190px;
-    margin-top: 150px;
+    margin-top: 50px;
+    // @include mobile.mobile_media{
+    //   padding: ;
+    // }
     @include tablet.tablet_media{
       padding: 40px 50px;
     }
